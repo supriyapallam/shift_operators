@@ -1,0 +1,20 @@
+module test();
+  reg [3:0]a,b;
+  reg [3:0]out1,out2;
+  
+  initial
+    begin
+      a=4'b0010;
+      b=4'b1000;
+      //logical left shift
+      out1=a<<2;
+      //logical right shift
+      out2=b>>2;
+    end
+  
+  initial
+    begin
+      $monitor("a=%b,b=%b,out1=%b,out2=%b",a,b,out1,out2);
+    end
+endmodule
+
